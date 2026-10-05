@@ -175,7 +175,7 @@
         <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="body">
-        ${e.swap ? `<div class="sec"><div class="swap">${e.swap}</div>${e.swapVideo ? `<div style="margin-top:8px">${vidBtn(e.swapVideo, 'Wideo: mostek biodrowy z hantlem', 'Wersja na pierwsze 4 tygodnie', true)}</div>` : ''}</div>` : ''}
+        ${e.swap ? `<div class="sec"><div class="swap">${e.swap}</div>${e.swapVideo ? `<div style="margin-top:8px">${vidBtn(e.swapVideo, e.swapVideoTitle || 'Wideo: wersja startowa', 'Wersja na pierwsze 4 tygodnie', true)}</div>` : ''}</div>` : ''}
         ${e.video ? `<div class="sec">${vidBtn(e.video, 'Zobacz technikę na wideo', 'Krótkie nagranie z boku i z przodu' + (e.videoNote ? ' · ' + e.videoNote : ''))}</div>` : ''}
         <div class="sec"><div class="lab">Ustawienie</div><div class="setup">${esc(e.setup)}</div></div>
         <div class="sec"><div class="lab">Jak wykonać</div><ol class="steps">${e.steps.map(x => '<li>' + esc(x) + '</li>').join('')}</ol></div>

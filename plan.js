@@ -13,17 +13,17 @@
  */
 window.PLAN = {
   title: 'Plan treningowy',
-  subtitle: 'Pośladki i nogi + wzmocnienie pleców · 3 treningi w tygodniu · ok. 60 minut',
+  subtitle: 'Nacisk na dół: dwa dni na pośladki i nogi, jeden na górę · 3 treningi w tygodniu · ok. 60 minut',
   videoBase: 'https://musclewiki.com/pl-pl/exercise/',
   videoQuery: '?model=f',
 
   sessions: [
     {
-      code:'A', name:'POŚLADKI', focus:'Wyprost biodra — główny dzień na pośladki',
+      code:'A', name:'POŚLADKI', focus:'Tylko pośladki — wyprost i odwodzenie biodra',
       ex:[
         {
           id:'barbell-hip-thrust', tag:'A1', video:'barbell-hip-thrust', name:'Hip thrust ze sztangą (plecy oparte o ławkę)', sets:'4 × 8–10', rest:120,
-          badge:'Start: mostek biodrowy', swapVideo:'dumbbell-glute-bridge',
+          badge:'Start: mostek biodrowy', swapVideo:'dumbbell-glute-bridge', swapVideoTitle:'Wideo: mostek biodrowy z hantlem',
           swap:'<b>Pierwsze 4 tygodnie: mostek biodrowy z hantlem zamiast sztangi.</b> Leżysz na macie, kolana ugięte, stopy blisko pośladków, hantel trzymany rękami na biodrach. Wypychasz biodra w górę, pauza 1 sekunda, powolny powrót — 3 × 12–15. Zakres jest mniejszy niż w hip thruście, ale ustawienie proste, a gryf nie uciska bioder. Na sztangę przechodzisz wtedy, gdy 3 × 15 z najcięższym wygodnym hantlem robi się łatwe.',
           setup:'Ławka stabilnie oparta o ścianę lub stojak, żeby nie odjechała. Usiądź na podłodze plecami do ławki tak, aby jej krawędź trafiła w dolne krawędzie łopatek. Sztanga leży w zgięciu bioder, koniecznie na grubej podkładce lub zrolowanej macie. Stopy płasko, na szerokość bioder — ustaw je tak, żeby w górnej pozycji goleń była pionowa.',
           steps:[
@@ -58,7 +58,24 @@ window.PLAN = {
           ]
         },
         {
-          id:'machine-standing-hamstring-curl', tag:'A3', video:'machine-standing-hamstring-curl', videoNote:'Twoja maszyna może wyglądać trochę inaczej — liczy się podwinięta miednica i powolny powrót.', name:'Zginanie nogi w tył stojąc (maszyna) — jednonóż', sets:'3 × 12 / nogę', rest:60,
+          id:'cable-standing-glute-kickback', tag:'A3', video:'cable-standing-glute-kickback', name:'Kickback na wyciągu (odprowadzanie nogi w tył)', sets:'3 × 12–15 / nogę', rest:60,
+          setup:'Opaska na kostkę, wyciąg ustawiony na najniższej pozycji. Stań przodem do wyciągu, około pół metra od niego, i trzymaj się ramy obiema rękami. Tułów lekko pochylony do przodu, noga podporowa lekko ugięta. Podwiń miednicę i napnij brzuch — to ustawienie trzymasz przez całą serię.',
+          steps:[
+            'Odprowadź pracującą nogę do tyłu i lekko w górę, prowadząc ruch piętą. Kolano lekko ugięte, stopa zgięta — palce do siebie.',
+            'Zatrzymaj się, gdy udo minie linię tułowia. Pauza 1 sekunda i mocno ściśnij pośladek.',
+            'Wracaj przez 2–3 sekundy, aż stopa znajdzie się obok nogi podporowej. Linka ma być cały czas napięta.',
+            'Skończ całą serię na jedną nogę, potem zmień stronę.'
+          ],
+          avoid:[
+            'Wyginanie lędźwi, żeby wyrzucić nogę wyżej. To najczęstszy błąd w tym ćwiczeniu — ostatnie centymetry w górę robi wtedy kręgosłup, nie pośladek. Zakres kończy się, gdy miednica zaczyna się przechylać.',
+            'Zamach i bujanie nogą. Każde powtórzenie zaczyna się od zera, bez rozpędu.',
+            'Otwieranie biodra na zewnątrz i skręcanie miednicy — biodra zostają ustawione równo, przodem do wyciągu.',
+            'Odkładanie ciężaru na stos między powtórzeniami.',
+            'Zbyt duży ciężar. Tu pracuje się lekko i na czucie — jeśli nie czujesz pośladka, ciężar jest za duży.'
+          ]
+        },
+        {
+          id:'machine-standing-hamstring-curl', tag:'A4', video:'machine-standing-hamstring-curl', videoNote:'Twoja maszyna może wyglądać trochę inaczej — liczy się podwinięta miednica i powolny powrót.', name:'Zginanie nogi w tył stojąc (maszyna) — jednonóż', sets:'3 × 12 / nogę', rest:60,
           setup:'Stajesz przodem do maszyny, biodro oparte o poduszkę, dłonie na uchwytach, tułów lekko pochylony do przodu. Noga podporowa lekko ugięta — nigdy zablokowana. Najważniejsze jest ustawienie miednicy: podwiń ją pod siebie i utrzymaj przez całą serię. Wałek opiera się z tyłu nogi — nad piętą, jeśli w tej maszynie zgina się kolano, albo nad kolanem, jeśli odprowadza się w tył całą nogę.',
           steps:[
             'Napnij brzuch i podwiń miednicę. To jedno ustawienie decyduje, czy ćwiczenie robi pośladek, czy dolne plecy.',
@@ -73,22 +90,6 @@ window.PLAN = {
             'Skręcanie miednicy w bok — biodra równolegle do maszyny.',
             'Wspinanie się na palce nogi podporowej, żeby zrobić więcej miejsca.',
             'Zbyt duży ciężar. Poznasz go po tym, że zakres robi się mały, a plecy pracują za pośladek.'
-          ]
-        },
-        {
-          id:'dumbbell-row-bilateral', tag:'A4', video:'dumbbell-row-bilateral', name:'Wiosłowanie hantlami w opadzie tułowia', sets:'3 × 10–12', rest:90,
-          setup:'Stopy na szerokość bioder, kolana lekko ugięte, biodra wypchnięte do tyłu, tułów pochylony około 45 stopni. Plecy płaskie od miednicy po głowę. Hantle wiszą swobodnie pod barkami.',
-          steps:[
-            'Najpierw ściągnij łopatki do siebie i w dół — dopiero potem zaczyna się ciąg.',
-            'Prowadź łokcie blisko tułowia, w stronę bioder, aż hantle dojdą do dolnych żeber.',
-            'W górnej pozycji zatrzymaj się na pół sekundy.',
-            'Opuszczaj przez 2–3 sekundy i pozwól łopatkom rozejść się na końcu.'
-          ],
-          avoid:[
-            'Zaokrąglone plecy — jeśli nie da się utrzymać płaskich, zmniejsz ciężar albo podnieś tułów wyżej.',
-            'Prostowanie się do pionu razem z każdym ciągiem. Tułów ma zostać nieruchomy.',
-            'Ciągnięcie samymi rękami z łokciami odstawionymi w bok.',
-            'Wyciąganie szyi i brody do przodu.'
           ]
         },
         {
@@ -109,43 +110,10 @@ window.PLAN = {
       ]
     },
     {
-      code:'B', name:'GÓRA + POŚLADEK', focus:'Postawa i plecy, z izolacją pośladka',
+      code:'B', name:'GÓRA', focus:'Plecy, barki i postawa — jedyny dzień na górę',
       ex:[
         {
-          id:'dumbbell-romanian-deadlift', tag:'B1', video:'dumbbell-romanian-deadlift', name:'Martwy ciąg rumuński z hantlami (lekko)', sets:'3 × 10', rest:120,
-          setup:'Stopy na szerokość bioder, hantle przy udach, kolana lekko ugięte — i takie pozostają przez cały ruch.',
-          steps:[
-            'Wypchnij biodra do tyłu, jakbyś chciała zamknąć pośladkiem drzwi za sobą.',
-            'Hantle suną blisko ud, dosłownie po nich.',
-            'Schodź do momentu wyraźnego napięcia z tyłu ud — zwykle to połowa goleni.',
-            'Wracaj, wypychając biodra do przodu i ściskając pośladki na końcu.'
-          ],
-          avoid:[
-            'Zaokrąglanie pleców na dole. Zakres wyznacza moment utraty płaskich pleców, nie odległość od podłogi.',
-            'Robienie z tego przysiadu — kolana lecą do przodu, biodra w dół zamiast do tyłu.',
-            'Hantle odsunięte od ciała.',
-            'Przeprost i odchylanie się do tyłu na górze.'
-          ]
-        },
-        {
-          id:'cable-standing-glute-kickback', tag:'B2', video:'cable-standing-glute-kickback', name:'Kickback na wyciągu (odprowadzanie nogi w tył)', sets:'3 × 12–15 / nogę', rest:60,
-          setup:'Opaska na kostkę, wyciąg ustawiony na najniższej pozycji. Stań przodem do wyciągu, około pół metra od niego, i trzymaj się ramy obiema rękami. Tułów lekko pochylony do przodu, noga podporowa lekko ugięta. Podwiń miednicę i napnij brzuch — to ustawienie trzymasz przez całą serię.',
-          steps:[
-            'Odprowadź pracującą nogę do tyłu i lekko w górę, prowadząc ruch piętą. Kolano lekko ugięte, stopa zgięta — palce do siebie.',
-            'Zatrzymaj się, gdy udo minie linię tułowia. Pauza 1 sekunda i mocno ściśnij pośladek.',
-            'Wracaj przez 2–3 sekundy, aż stopa znajdzie się obok nogi podporowej. Linka ma być cały czas napięta.',
-            'Skończ całą serię na jedną nogę, potem zmień stronę.'
-          ],
-          avoid:[
-            'Wyginanie lędźwi, żeby wyrzucić nogę wyżej. To najczęstszy błąd w tym ćwiczeniu — ostatnie centymetry w górę robi wtedy kręgosłup, nie pośladek. Zakres kończy się, gdy miednica zaczyna się przechylać.',
-            'Zamach i bujanie nogą. Każde powtórzenie zaczyna się od zera, bez rozpędu.',
-            'Otwieranie biodra na zewnątrz i skręcanie miednicy — biodra zostają ustawione równo, przodem do wyciągu.',
-            'Odkładanie ciężaru na stos między powtórzeniami.',
-            'Zbyt duży ciężar. Tu pracuje się lekko i na czucie — jeśli nie czujesz pośladka, ciężar jest za duży.'
-          ]
-        },
-        {
-          id:'barbell-bent-over-row', tag:'B3', video:'barbell-bent-over-row', name:'Wiosłowanie sztangą w opadzie', sets:'4 × 8–10', rest:120,
+          id:'barbell-bent-over-row', tag:'B1', video:'barbell-bent-over-row', name:'Wiosłowanie sztangą w opadzie', sets:'4 × 8–10', rest:120,
           setup:'Sztanga zdjęta ze stojaka, chwyt nachwytem nieco szerszy niż barki. Kolana lekko ugięte, biodra do tyłu, tułów pochylony 45 stopni, sztanga wisi pod barkami.',
           steps:[
             'Napnij brzuch i ustaw plecy płasko — tę pozycję trzymasz do końca serii.',
@@ -161,7 +129,7 @@ window.PLAN = {
           ]
         },
         {
-          id:'machine-pulldown', tag:'B4', video:'machine-pulldown', name:'Ściąganie drążka wyciągu górnego', sets:'3 × 10', rest:90,
+          id:'machine-pulldown', tag:'B2', video:'machine-pulldown', name:'Ściąganie drążka wyciągu górnego', sets:'3 × 10', rest:90,
           setup:'Uda zablokowane pod wałkami, chwyt nachwytem szerszy niż barki, ręce wyprostowane.',
           steps:[
             'Odchyl tułów do tyłu o jakieś 15 stopni i wypchnij klatkę w górę.',
@@ -177,7 +145,7 @@ window.PLAN = {
           ]
         },
         {
-          id:'dumbbell-seated-overhead-press', tag:'B5', video:'dumbbell-seated-overhead-press', name:'Wyciskanie hantli nad głowę siedząc', sets:'3 × 8–10', rest:90,
+          id:'dumbbell-seated-overhead-press', tag:'B3', video:'dumbbell-seated-overhead-press', name:'Wyciskanie hantli nad głowę siedząc', sets:'3 × 8–10', rest:90,
           setup:'Oparcie niemal pionowe, plecy przyklejone na całej długości. Hantle na wysokości uszu, łokcie lekko przed linią tułowia, nadgarstki proste.',
           steps:[
             'Napnij brzuch i ściągnij żebra w dół — miednica i klatka jedna nad drugą.',
@@ -193,7 +161,23 @@ window.PLAN = {
           ]
         },
         {
-          id:'dumbbell-rear-delt-fly', tag:'B6', video:'dumbbell-rear-delt-fly', videoNote:'Na nagraniu ruch w innej pozycji wyjściowej — sam ruch ramion jest ten sam.', name:'Odwodzenie hantli w opadzie (tylny akton barku)', sets:'3 × 12–15', rest:60,
+          id:'dumbbell-row-unilateral', tag:'B4', video:'dumbbell-row-unilateral', name:'Wiosłowanie hantlem jednorącz w podporze', sets:'3 × 12 / stronę', rest:60,
+          setup:'Kolano i dłoń jednej strony na ławce, druga stopa na podłodze, lekko z tyłu. Plecy płaskie i równoległe do podłogi, hantel wisi pod barkiem.',
+          steps:[
+            'Ściągnij łopatkę w dół i do kręgosłupa.',
+            'Pociągnij łokieć w stronę biodra, prowadząc hantel blisko tułowia.',
+            'Zatrzymaj się na pół sekundy przy żebrach.',
+            'Opuszczaj przez 3 sekundy i pozwól łopatce wysunąć się na końcu.'
+          ],
+          avoid:[
+            'Skręcanie tułowia i otwieranie klatki za hantlem — barki równolegle do podłogi.',
+            'Prowadzenie hantla łukiem na zewnątrz.',
+            'Zaokrąglone plecy i opuszczona głowa.',
+            'Ciąg bicepsem bez udziału łopatki.'
+          ]
+        },
+        {
+          id:'dumbbell-rear-delt-fly', tag:'B5', video:'dumbbell-rear-delt-fly', videoNote:'Na nagraniu ruch w innej pozycji wyjściowej — sam ruch ramion jest ten sam.', name:'Odwodzenie hantli w opadzie (tylny akton barku)', sets:'3 × 12–15', rest:60,
           setup:'Usiądź na końcu ławki i połóż tułów na udach. Hantle wiszą pod łydkami, łokcie lekko ugięte i takie zostają.',
           steps:[
             'Rozprowadź ramiona na boki, prowadząc ruch łokciami, kciuki lekko w dół.',
@@ -210,11 +194,13 @@ window.PLAN = {
       ]
     },
     {
-      code:'C', name:'NOGI — HINGE I JEDNONÓŻ', focus:'Tył uda, pośladek, praca na jednej nodze',
+      code:'C', name:'NOGI', focus:'Tył i przód uda, praca na jednej nodze',
       ex:[
         {
           id:'barbell-romanian-deadlift', tag:'C1', video:'barbell-romanian-deadlift', name:'Martwy ciąg rumuński ze sztangą', sets:'4 × 8', rest:120,
-          setup:'To samo ćwiczenie co B1, ale z realnym ciężarem. Sztangę zdejmij ze stojaka, nie z podłogi. Stopy na szerokość bioder, chwyt nieco szerszy niż uda, kolana lekko ugięte.',
+          badge:'Start: hantle', swapVideo:'dumbbell-romanian-deadlift', swapVideoTitle:'Wideo: martwy ciąg rumuński z hantlami',
+          swap:'<b>Pierwsze 4 tygodnie: hantle zamiast sztangi.</b> Ten sam ruch, ale z dwoma hantlami trzymanymi przy udach — łatwiej utrzymać płaskie plecy i nauczyć się wypychać biodra do tyłu. 3 × 10. Na sztangę przechodzisz, gdy 3 × 10 z najcięższymi wygodnymi hantlami robisz z płaskimi plecami do końca serii.',
+          setup:'Sztangę zdejmij ze stojaka, nie z podłogi. Stopy na szerokość bioder, chwyt nieco szerszy niż uda, kolana lekko ugięte.',
           steps:[
             'Napnij brzuch, ściągnij łopatki, sztanga dotyka ud.',
             'Wypchnij biodra do tyłu i pozwól sztandze sunąć po udach w dół.',
@@ -291,22 +277,6 @@ window.PLAN = {
             'Zawijanie stóp do środka lub na zewnątrz pod ciężarem.',
             'Zginanie kolan, żeby pomóc sobie udami.'
           ]
-        },
-        {
-          id:'dumbbell-row-unilateral', tag:'C6', video:'dumbbell-row-unilateral', name:'Wiosłowanie hantlem jednorącz w podporze', sets:'3 × 12 / stronę', rest:60,
-          setup:'Kolano i dłoń jednej strony na ławce, druga stopa na podłodze, lekko z tyłu. Plecy płaskie i równoległe do podłogi, hantel wisi pod barkiem.',
-          steps:[
-            'Ściągnij łopatkę w dół i do kręgosłupa.',
-            'Pociągnij łokieć w stronę biodra, prowadząc hantel blisko tułowia.',
-            'Zatrzymaj się na pół sekundy przy żebrach.',
-            'Opuszczaj przez 3 sekundy i pozwól łopatce wysunąć się na końcu.'
-          ],
-          avoid:[
-            'Skręcanie tułowia i otwieranie klatki za hantlem — barki równolegle do podłogi.',
-            'Prowadzenie hantla łukiem na zewnątrz.',
-            'Zaokrąglone plecy i opuszczona głowa.',
-            'Ciąg bicepsem bez udziału łopatki.'
-          ]
         }
       ]
     }
@@ -335,13 +305,14 @@ window.PLAN = {
   </div>
 
   <div class="block">
-    <h3>Pierwsze 4 tygodnie: mostek zamiast hip thrusta</h3>
+    <h3>Pierwsze 4 tygodnie: wersje startowe</h3>
     <p>Hip thrust ze sztangą to najtrudniejsze technicznie ćwiczenie w planie, a gryf na biodrach potrafi zwyczajnie boleć. Przez pierwsze tygodnie rób <b>mostek biodrowy z hantlem</b> — 3 × 12–15, leżąc na macie, hantel trzymany rękami na biodrach. Na sztangę przechodzisz, gdy 3 × 15 z ciężkim hantlem robi się łatwe.</p>
+    <p>Tak samo z <b>martwym ciągiem rumuńskim</b> w treningu C: najpierw hantle, 3 × 10. Sztanga wchodzi, gdy plecy zostają płaskie do ostatniego powtórzenia.</p>
   </div>
 
   <div class="block">
     <h3>Postawa poza siłownią</h3>
-    <p>Garbienie się to w połowie słabe mięśnie pleców, a w połowie nawyk. Planem zajmuje się pierwsza połowa — wiosłowanie jest w każdym treningu. Na drugą wystarczą dwie rzeczy dziennie: rozciąganie klatki w futrynie drzwi 2 × 30 sekund i monitor ustawiony na wysokości oczu.</p>
+    <p>Garbienie się to w połowie słabe mięśnie pleców, a w połowie nawyk. Planem zajmuje się pierwsza połowa — trening B to dwa wiosłowania, ściąganie drążka i tylny akton barku. Skoro plecy pracują raz w tygodniu, w tym dniu nie skracaj serii na plecy. Na drugą wystarczą dwie rzeczy dziennie: rozciąganie klatki w futrynie drzwi 2 × 30 sekund i monitor ustawiony na wysokości oczu.</p>
   </div>
 
   <div class="block">
