@@ -10,10 +10,13 @@
  *   video  – końcówka adresu nagrania z musclewiki.com
  *            (np. 'barbell-hip-thrust' z musclewiki.com/exercise/barbell-hip-thrust).
  *   rest   – przerwa w sekundach (używana przez minutnik).
+ *   next   – (opcjonalnie) co zrobić, gdy ćwiczenie robi się za łatwe.
+ *
+ * Sesja może mieć pole tab – własną nazwę zakładki (np. 'W domu').
  */
 window.PLAN = {
   title: 'Plan treningowy',
-  subtitle: 'Nacisk na dół: dwa dni na pośladki i nogi, jeden na górę · 3 treningi w tygodniu · ok. 60 minut',
+  subtitle: 'Nacisk na dół: pośladki i nogi 2× na siłowni i 1× w domu, góra 1× w tygodniu',
   videoBase: 'https://musclewiki.com/pl-pl/exercise/',
   videoQuery: '?model=f',
 
@@ -279,6 +282,96 @@ window.PLAN = {
           ]
         }
       ]
+    },
+    {
+      code:'D', tab:'W domu', name:'POŚLADKI W DOMU', focus:'Kettle 12 kg + guma · ok. 35 minut · tylko pośladki',
+      ex:[
+        {
+          id:'kettlebell-hip-thrust', tag:'D1', video:'kettlebell-hip-thrust', videoNote:'Na nagraniu ławka i brak gumy — w domu opierasz się o kanapę, a gumę zakładasz nad kolana.', name:'Hip thrust z kettlem i gumą (plecy oparte o kanapę)', sets:'4 × 15–20', rest:90,
+          setup:'Kanapa albo łóżko dosunięte do ściany, żeby nie odjechało — jego krawędź trafia w dolne krawędzie łopatek. Guma tuż nad kolanami. Kettle leży poziomo w zgięciu bioder, trzymany oburącz za rączkę, pod spodem złożony ręcznik. Stopy na szerokość bioder, ustawione tak, żeby w górnej pozycji goleń była pionowa.',
+          steps:[
+            'Schowaj brodę i patrz na swoje kolana.',
+            'Rozepchnij kolana na boki na gumę i trzymaj to napięcie przez całą serię.',
+            'Wypchnij biodra w górę przez pięty, aż tułów i uda utworzą poziomą linię. Pauza 2 sekundy i maksymalne ściśnięcie pośladków.',
+            'Opuszczaj przez 3 sekundy. Biodra tylko muskają podłogę i od razu wracają w górę.'
+          ],
+          avoid:[
+            'Wyginanie lędźwi na górze. Jeśli czujesz dolne plecy zamiast pośladków, ruch poszedł za wysoko albo żebra uciekły w górę.',
+            'Kolana schodzące do środka pod gumą. Jeśli guma wygrywa, przesuń ją wyżej na uda — będzie lżej.',
+            'Szybkie, odbijane powtórzenia. 12 kg to mały ciężar, więc o efekcie decyduje pauza na górze i wolne opuszczanie.',
+            'Kanapa, która odjeżdża przy każdym powtórzeniu.'
+          ],
+          next:'Gdy 4 × 20 z pauzą robi się łatwe: hip thrust na jednej nodze z kettlem, druga noga zgięta w powietrzu. Zaczynasz od 3 × 8–10 na nogę.'
+        },
+        {
+          id:'kettlebell-single-leg-deadlift', tag:'D2', video:'kettlebell-single-leg-deadlift', name:'Martwy ciąg na jednej nodze z kettlem', sets:'3 × 10–12 / nogę', rest:60,
+          setup:'Stań na jednej nodze, kolano lekko ugięte. Kettle w ręce po przeciwnej stronie niż noga, na której stoisz — stoisz na lewej, kettle trzymasz w prawej. Na początek wersja z podpórką: palce drugiej nogi oparte o podłogę pół kroku za tobą. Dają równowagę, ale nie pracują.',
+          steps:[
+            'Wypchnij biodro do tyłu i pochyl tułów. Kettle zjeżdża w dół wzdłuż nogi, na której stoisz.',
+            'Tylna noga unosi się w jednej linii z tułowiem — albo w wersji z podpórką zostaje lekko oparta palcami o podłogę.',
+            'Schodź do wyraźnego rozciągnięcia z tyłu uda i pośladka. Zwykle kettle jest wtedy na wysokości połowy goleni.',
+            'Wracaj, wypychając biodro do przodu i ściskając pośladek nogi, na której stoisz.',
+            'Skończ całą serię na jedną nogę, potem zmień stronę.'
+          ],
+          avoid:[
+            'Otwieranie biodra: miednica przekręca się w bok, a palce tylnej stopy patrzą na zewnątrz. Obie strony miednicy zostają na tej samej wysokości, palce tylnej stopy w dół.',
+            'Zaokrąglone plecy na dole. Zakres kończy się tam, gdzie plecy przestają być płaskie.',
+            'Coraz mocniejsze zginanie kolana nogi podporowej, aż ruch zamienia się w przysiad na jednej nodze.',
+            'Walka z równowagą kosztem techniki. Na początku trzymaj się wolną ręką ściany albo oparcia krzesła.'
+          ],
+          next:'Gdy 3 × 12 z podpórką jest łatwe: pełna wersja bez podpórki. Potem opuszczanie przez 3 sekundy.'
+        },
+        {
+          id:'kettlebell-reverse-lunge', tag:'D3', video:'kettlebell-reverse-lunge', videoNote:'Na nagraniu dwa odważniki przy bokach — z jednym kettlem trzymasz go oburącz przy klatce.', name:'Wykrok w tył z kettlem przy klatce', sets:'3 × 10–12 / nogę', rest:60,
+          setup:'Kettle trzymany oburącz za boczne części rączki, przy klatce piersiowej, łokcie skierowane w dół. Stopy na szerokość bioder. Pod tylne kolano mata albo dywan.',
+          steps:[
+            'Zrób duży krok w tył jedną nogą i schodź w dół, aż tylne kolano prawie dotknie podłogi.',
+            'Tułów lekko pochylony do przodu — wtedy pośladek przedniej nogi pracuje mocniej.',
+            'Przednie kolano zostaje nad śródstopiem i nie ucieka do środka.',
+            'Wróć do stania, odpychając się piętą przedniej nogi.',
+            'Skończ całą serię na jedną nogę, potem zmień stronę.'
+          ],
+          avoid:[
+            'Za krótki krok w tył. Przednie kolano leci wtedy daleko przed palce, a pracuje głównie udo zamiast pośladka.',
+            'Odpychanie się tylną nogą przy powrocie.',
+            'Uderzanie kolanem o podłogę. Ruch w dół jest kontrolowany do samego końca.',
+            'Odchylanie tułowia do tyłu i wypychanie bioder do przodu w dolnej pozycji.'
+          ],
+          next:'Gdy 3 × 12 jest łatwe: przednią stopę stawiasz na stabilnym podwyższeniu 10–15 cm, np. na grubej książce albo stopniu. Zakres rośnie, a razem z nim praca pośladka.'
+        },
+        {
+          id:'band-glute-kickback', tag:'D4', video:'band-glute-kickback', videoNote:'Na nagraniu długa guma zaczepiona o dłonie i prosta noga. Z gumą nad kolanami kolano zostaje ugięte, a stopa idzie w stronę sufitu — pracuje ten sam mięsień.', name:'Kickback w klęku podpartym z gumą', sets:'3 × 15–20 / nogę', rest:45,
+          setup:'Klęk podparty na macie: dłonie pod barkami, kolana pod biodrami. Guma tuż nad kolanami. Plecy płaskie, brzuch napięty, wzrok w podłogę.',
+          steps:[
+            'Unieś jedną nogę. Kolano zostaje ugięte pod kątem prostym.',
+            'Wypchnij stopę w stronę sufitu, aż udo znajdzie się w jednej linii z tułowiem. Pauza 1 sekunda i ściśnięcie pośladka.',
+            'Opuszczaj powoli, aż kolano wróci tuż nad podłogę, i od razu zaczynaj następne powtórzenie.',
+            'Skończ całą serię na jedną nogę, potem zmień stronę.'
+          ],
+          avoid:[
+            'Wyginanie lędźwi i zadzieranie głowy, żeby wyrzucić nogę wyżej. To najczęstszy błąd w tym ćwiczeniu — zakres kończy się, gdy udo jest w linii z tułowiem.',
+            'Przechylanie bioder i tułowia na bok.',
+            'Szybkie wymachy. Każde powtórzenie zaczyna się od zera, bez rozpędu.'
+          ],
+          next:'Gdy 3 × 20 jest łatwe: pauza 2 sekundy na górze i opuszczanie przez 3 sekundy.'
+        },
+        {
+          id:'band-hip-abduction', tag:'D5', video:'band-hip-abduction', name:'Odwodzenie nogi w bok stojąc z gumą', sets:'3 × 15–20 / nogę', rest:45,
+          setup:'Guma tuż nad kolanami (łatwiej) albo na kostkach (trudniej). Stań bokiem przy ścianie lub krześle i trzymaj się jedną ręką. Noga podporowa lekko ugięta, brzuch napięty, tułów prosto.',
+          steps:[
+            'Odprowadź nogę w bok, lekko po skosie do tyłu. Palce stopy skierowane do przodu albo minimalnie w dół.',
+            'Zatrzymaj się w najwyższym punkcie na 1 sekundę — czujesz górną, boczną część pośladka.',
+            'Wracaj powoli, nie pozwalając gumie szarpnąć nogi do środka.',
+            'Skończ całą serię na jedną nogę, potem zmień stronę.'
+          ],
+          avoid:[
+            'Przechylanie tułowia w bok, żeby unieść nogę wyżej. Tułów zostaje pionowo.',
+            'Obracanie stopy palcami w górę — wtedy pracuje przód biodra, a pośladek odpoczywa.',
+            'Zamach i odbijanie nogi na dole.'
+          ],
+          next:'Gdy 3 × 20 z gumą nad kolanami jest łatwe: przesuń gumę na kostki. Potem dodaj pauzę 2 sekundy w najwyższym punkcie.'
+        }
+      ]
     }
   ],
 
@@ -286,7 +379,7 @@ window.PLAN = {
   rules: `
 <div class="block">
     <h3>Jak to działa</h3>
-    <p>Trzy różne treningi — A, B i C — robione po kolei, jeden po drugim. Nie ma przypisanych dni tygodnia: jeśli trening wypadnie, po prostu robisz go następnym razem. W tygodniu wychodzą 3 sesje, między nimi przynajmniej jeden dzień przerwy.</p>
+    <p>Trzy różne treningi — A, B i C — robione po kolei, jeden po drugim. Nie ma przypisanych dni tygodnia: jeśli trening wypadnie, po prostu robisz go następnym razem. W tygodniu wychodzą 3 sesje, między nimi przynajmniej jeden dzień przerwy. Do tego raz w tygodniu dochodzi krótki trening w domu — opis niżej.</p>
     <p><b>Rozgrzewka (6–8 min):</b> 5 minut roweru lub orbitreka, krążenia bioder i ramion, 10 mostków biodrowych na macie, a potem 2 lekkie serie pierwszego ćwiczenia z planu.</p>
     <p><b>Tempo:</b> opuszczanie ciężaru wolno (2–3 s), podnoszenie zdecydowanie. Ostatnie powtórzenie w serii ma być trudne — ale nie kosztem techniki.</p>
     <p><b>Dwie prasy do nóg:</b> w treningu A ta, na której leży się w podparciu i wypycha ciężar w górę — stopy wysoko i szeroko, praca w pośladki. W treningu C ta siedząca, wypychana przed siebie — stopy nisko i wąsko, praca w uda.</p>
@@ -308,6 +401,15 @@ window.PLAN = {
     <h3>Pierwsze 4 tygodnie: wersje startowe</h3>
     <p>Hip thrust ze sztangą to najtrudniejsze technicznie ćwiczenie w planie, a gryf na biodrach potrafi zwyczajnie boleć. Przez pierwsze tygodnie rób <b>mostek biodrowy z hantlem</b> — 3 × 12–15, leżąc na macie, hantel trzymany rękami na biodrach. Na sztangę przechodzisz, gdy 3 × 15 z ciężkim hantlem robi się łatwe.</p>
     <p>Tak samo z <b>martwym ciągiem rumuńskim</b> w treningu C: najpierw hantle, 3 × 10. Sztanga wchodzi, gdy plecy zostają płaskie do ostatniego powtórzenia.</p>
+  </div>
+
+  <div class="block">
+    <h3>Trening w domu</h3>
+    <p><b>Kiedy:</b> raz w tygodniu, najlepiej dzień po treningu B. B to sama góra, więc pośladki są wtedy wypoczęte. Kolejność wychodzi A → B → w domu → C. Możesz go też zrobić zamiast treningu A, gdy siłownia odpada.</p>
+    <p><b>Rozgrzewka (5 min):</b> 15 mostków biodrowych bez obciążenia, 2 × 10 kroków w bok z gumą nad kolanami w lekkim przysiadzie i 10 krążeń bioder w każdą stronę.</p>
+    <p><b>Progresja przy jednym kettlu.</b> 12 kg nie urośnie, więc trening robi się trudniejszy w inny sposób, po kolei: najpierw dokładasz powtórzenia do górnej granicy, potem dodajesz pauzę na górze, potem wydłużasz opuszczanie do 3–4 sekund, a na końcu przechodzisz na trudniejszą wersję z ramki „Następny krok” przy ćwiczeniu. Zawsze tylko jedna zmiana naraz.</p>
+    <p>Seria kończy się 1–2 powtórzenia przed momentem, w którym technika się sypie. Przy lekkim ciężarze łatwo zrobić 20 powtórzeń „na pół gwizdka”, które nic nie dają.</p>
+    <p class="hint">Jeśli w dniu treningu w domu pośladki są jeszcze obolałe po siłowni, zrób po 2 serie albo przesuń trening o dzień.</p>
   </div>
 
   <div class="block">

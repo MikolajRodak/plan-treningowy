@@ -1,6 +1,6 @@
 # Plan treningowy
 
-Prosta aplikacja na telefon z planem treningowym na siłownię. Trzy treningi robione na zmianę, przy każdym ćwiczeniu opis techniki, lista najczęstszych błędów i krótki film. Do tego zapis ciężarów, minutnik przerw i reguła progresji.
+Prosta aplikacja na telefon z planem treningowym na siłownię i do domu. Trzy treningi na siłownię robione na zmianę i jeden domowy, przy każdym ćwiczeniu opis techniki, lista najczęstszych błędów i krótki film. Do tego zapis ciężarów, minutnik przerw i reguła progresji.
 
 Działa jak zwykła aplikacja: instaluje się na ekranie głównym, otwiera na pełnym ekranie i działa bez internetu. Nie ma kont, serwera ani reklam.
 
@@ -9,6 +9,7 @@ Działa jak zwykła aplikacja: instaluje się na ekranie głównym, otwiera na p
 ## Co potrafi
 
 - **Trzy treningi A / B / C** — robione po kolei, bez przypisanych dni tygodnia.
+- **Trening w domu** — krótka sesja na pośladki z kettlem i gumą, raz w tygodniu.
 - **Opis każdego ćwiczenia** — ustawienie, ruch krok po kroku i czego unikać.
 - **Filmy** — przycisk „Wideo” otwiera krótkie nagranie techniki (MuscleWiki).
 - **Zapis wyników** — ciężar i powtórzenia, z podglądem dwóch ostatnich zapisów.

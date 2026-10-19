@@ -6,7 +6,7 @@
  *
  * Gdy dodajesz NOWY plik do projektu, dopisz go do listy ASSETS i podbij numer w CACHE.
  */
-const CACHE = 'plan-treningowy-v1';
+const CACHE = 'plan-treningowy-v2';
 const ASSETS = [
   './',
   'index.html',

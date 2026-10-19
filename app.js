@@ -62,7 +62,7 @@
   const tabsEl = $('#tabs');
   const viewEl = $('#view');
   const TABS = [
-    ...P.sessions.map(s => ({ id: s.code, label: 'Trening ' + s.code })),
+    ...P.sessions.map(s => ({ id: s.code, label: s.tab || ('Trening ' + s.code) })),
     { id: 'zasady', label: 'Zasady' },
     { id: 'dane', label: 'Dane' }
   ];
@@ -180,6 +180,7 @@
         <div class="sec"><div class="lab">Ustawienie</div><div class="setup">${esc(e.setup)}</div></div>
         <div class="sec"><div class="lab">Jak wykonać</div><ol class="steps">${e.steps.map(x => '<li>' + esc(x) + '</li>').join('')}</ol></div>
         <div class="sec"><div class="lab bad">Czego unikać</div><ul class="bad">${e.avoid.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>
+        ${e.next ? `<div class="sec"><div class="nextbox"><b>Następny krok:</b> ${esc(e.next)}</div></div>` : ''}
         <div class="log">
           <div class="log-row">
             <input type="number" inputmode="decimal" placeholder="kg" step="0.5" min="0" aria-label="Ciężar w kg" value="${last ? esc(last.kg) : ''}">
